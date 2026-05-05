@@ -1,0 +1,61 @@
+{{ define "main" }}
+  <section>
+    <h2>Location</h2>
+    {{ partial "location.html" . }}
+  </section>
+
+  {{ if gt (len hugo.Data.schedule) 0 }}
+    <section>
+      <h2>Schedule</h2>
+      {{ range hugo.Data.schedule }}
+        <h3>{{ .date }}</h3>
+        <dl class="schedule">
+          {{ range .slots }}
+            <dt>{{ .time }}</dt>
+            {{ if .talk }}
+              {{ $talkID := .talk }}
+              {{ $talk := index hugo.Data.talks $talkID }}
+              {{ $speaker := index hugo.Data.speakers $talkID }}
+              {{ if $talk }}
+                <dd class="talk"><a href="#{{ $talkID }}">{{ $talk.title }}</a></dd>
+                {{ if $speaker }}
+                  <dd class="speaker"><span class="name">{{ $speaker.name }}</span> (<span class="affiliation">{{ $speaker.affiliation }}</span>)</dd>
+                {{ end }}
+              {{ else }}
+                <dd><em>to be announced</em></dd>
+              {{ end }}
+            {{ else if .other }}
+              <dd>{{ .other }}</dd>
+            {{ else }}
+              <dd><em>to be announced</em></dd>
+            {{ end }}
+          {{ end }}
+        </dl>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{ if gt (len hugo.Data.talks) 0 }}
+    <section>
+      <h2>Abstracts</h2>
+      <ul class="people-list">
+        {{ range $talkID, $talk := hugo.Data.talks }}
+          {{ $speaker := index hugo.Data.speakers $talk.speaker }}
+          <li>{{ with $speaker }}{{ .name }}{{ end }}: <a href="#{{ $talkID }}">{{ $talk.title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ range $talkID, $talk := hugo.Data.talks }}
+        {{ $speaker := index hugo.Data.speakers $talk.speaker }}
+        <section id="{{ $talkID }}">
+          <h3>{{ with $talk.title }}{{ . }}{{ else }}<em>To be announced</em>{{ end }}</h3>
+          {{ with $speaker }}
+            <p><span class="name">{{ .name }}</span> (<span class="affiliation">{{ .affiliation }}</span>)</p>
+          {{ end }}
+          {{ with $talk.abstract }}
+            <blockquote>{{ . | markdownify }}</blockquote>
+          {{ end }}
+        </section>
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}

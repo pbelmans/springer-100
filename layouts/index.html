@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  {{ if gt (len hugo.Data.speakers) 0 }}
+    <section>
+      <h2>Confirmed speakers</h2>
+      <ul class="people-list">
+        {{ range sort hugo.Data.speakers "name" }}
+          <li>
+            <span class="name"><a href="{{ .website }}">{{ .name }}</a></span>
+            <span class="affiliation">({{ .affiliation }})</span>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  <section>
+    <h2>Organisation</h2>
+    <ul class="people-list">
+      <li><span class="name"><a href="https://pbelmans.ncag.info">Pieter Belmans</a></span> <span class="affiliation">(Utrecht University)</span></li>
+      <li><span class="name"><a href="https://webspace.science.uu.nl/~kool0009/">Martijn Kool</a></span> <span class="affiliation">(Utrecht University)</span></li>
+      <li><span class="name"><a href="https://www.uu.nl/staff/CFFaber">Carel Faber</a></span> <span class="affiliation">(Utrecht University)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Support</h2>
+    <p>The workshop is supported by Utrecht University and <a href="https://nwo.nl">Dutch Research Council (NWO)</a> through <a href="https://cats.ncag.info">CatsINCAGe</a>.</p>
+  </section>
+{{ end }}

@@ -1,0 +1,11 @@
+baseURL: https://moduli-2025.ncag.info/
+locale: en
+title: Springer 100
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

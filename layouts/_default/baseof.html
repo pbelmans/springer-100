@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with .Params.subtitle }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+    {{ partial "head-scripts.html" . }}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Home</a>
+          {{ range hugo.Data.navigation }}
+            {{ $href := .link | relURL }}
+            <a href="{{ $href }}"{{ if eq $.RelPermalink $href }} class="active"{{ end }}>{{ .name }}</a>
+          {{ end }}
+        </nav>
+      </div>
+      <div class="container hero">
+        <p class="eyebrow">Workshop</p>
+        <h1>{{ site.Title }}</h1>
+        {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+      </div>
+    </header>
+    <main class="container content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>
