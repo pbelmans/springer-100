@@ -7,13 +7,12 @@
     {{ with .Params.subtitle }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v={{ readFile "static/css/site.css" | sha256 }}">
     {{ partial "head-scripts.html" . }}
   </head>
   <body>
     <header class="site-header">
       <div class="container topbar">
-        <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
         <nav class="nav-links" aria-label="Primary">
           <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Home</a>
           {{ range hugo.Data.navigation }}
@@ -23,8 +22,7 @@
         </nav>
       </div>
       <div class="container hero">
-        <p class="eyebrow">Workshop</p>
-        <h1>{{ site.Title }}</h1>
+        <h1><a href="{{ "/" | relURL }}">{{ site.Title }}</a></h1>
         {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
       </div>
     </header>

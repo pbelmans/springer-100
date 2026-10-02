@@ -1,11 +1,15 @@
 {{ define "main" }}
+  <figure class="springer-portrait">
+    <img src="{{ "assets/tonny-springer.jpg" | relURL }}" alt="Tonny Springer in 1973" width="556" height="800">
+    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Tonny_Springer.jpg">Tonny Springer, 1973</a>. Photo: Konrad Jacobs / <a href="https://opc.mfo.de/detail?photo_id=3973">MFO</a>. <a href="https://creativecommons.org/licenses/by-sa/2.0/de/deed.en">CC BY-SA 2.0 DE</a>.</figcaption>
+  </figure>
   {{ .Content }}
 
   {{ if gt (len hugo.Data.speakers) 0 }}
     <section>
-      <h2>Confirmed speakers</h2>
+      <h2>Speakers</h2>
       <ul class="people-list">
-        {{ range sort hugo.Data.speakers "name" }}
+        {{ range sort hugo.Data.speakers "surname" }}
           <li>
             <span class="name"><a href="{{ .website }}">{{ .name }}</a></span>
             <span class="affiliation">({{ .affiliation }})</span>
@@ -26,6 +30,6 @@
 
   <section>
     <h2>Support</h2>
-    <p>The workshop is supported by Utrecht University and <a href="https://nwo.nl">Dutch Research Council (NWO)</a> through <a href="https://cats.ncag.info">CatsINCAGe</a>.</p>
+    <p>The workshop is supported by Utrecht University and <a href="https://nwo.nl">Dutch Research Council (NWO)</a> through <a href="https://www.nwo.nl/projecten/rzklf82806">CatsINCAGe</a>.</p>
   </section>
 {{ end }}

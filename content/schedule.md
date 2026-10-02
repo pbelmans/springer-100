@@ -1,5 +1,5 @@
 ---
 title: Schedule
-subtitle: workshop at Utrecht University, somewhere in 2026
+subtitle: Utrecht University, November 6, 2026
 type: schedule
 ---
