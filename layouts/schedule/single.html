@@ -18,11 +18,11 @@
               {{ $speaker := index hugo.Data.speakers $talkID }}
               {{ if $talk }}
                 <dd class="talk"><a href="#{{ $talkID }}">{{ $talk.title }}</a></dd>
-                {{ if $speaker }}
-                  <dd class="speaker"><span class="name">{{ $speaker.name }}</span> (<span class="affiliation">{{ $speaker.affiliation }}</span>)</dd>
-                {{ end }}
               {{ else }}
                 <dd><em>to be announced</em></dd>
+              {{ end }}
+              {{ if $speaker }}
+                <dd class="speaker"><span class="name">{{ $speaker.name }}</span> (<span class="affiliation">{{ $speaker.affiliation }}</span>)</dd>
               {{ end }}
             {{ else if .other }}
               <dd>{{ .other }}</dd>

@@ -1,11 +1,11 @@
 - date: November 6, 2026
   slots:
     [
-      { time: "10:00–11:00" },
+      { time: "10:00–11:00", talk: johan-martens },
       { time: "11:00–11:30", other: "coffee break" },
-      { time: "11:30–12:30" },
+      { time: "11:30–12:30", talk: emily-norton },
       { time: "12:30–14:00", other: "lunch" },
-      { time: "14:00–15:00" },
+      { time: "14:00–15:00", talk: eduard-looijenga },
       { time: "15:00–15:30", other: "coffee break" },
-      { time: "15:30–16:30" },
+      { time: "15:30–16:30", talk: maarten-solleveld },
     ]
