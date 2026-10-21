@@ -1,3 +1,12 @@
+eduard-looijenga:
+  speaker: eduard-looijenga
+  title: Cubic surfaces and the Petersen graph
+  abstract: >-
+    Ever since Cayley and Salmon found in 1849 that a smooth cubic surface contains exactly 27 lines, algebraic geometers have been fascinated by that discovery.
+    Perhaps the most symmetric cubic surface is the one named after Clebsch, who studied it in detail (1871) and of which Klein had a plaster model made which was shown at the World Fair in Chicago (1894).
+    The Clebsch surface has the same symmetry group as the Petersen graph, namely the alternating group of degree 5.
+    I will explain that this is more than a mere coincidence, for this leads to presentation of the (orbifold) fundamental group of the moduli space of cubic surfaces in terms of a generalized braid group defined by the Petersen graph, when we take the Clebsch surface as base point.
+    This is based on joint work with Allcock and Basak.
 johan-martens:
   speaker: johan-martens
   title: Moduli of parahoric Higgs bundles and symplectic resolutions
