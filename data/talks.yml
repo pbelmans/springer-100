@@ -1,11 +1,12 @@
 eduard-looijenga:
   speaker: eduard-looijenga
   title: Cubic surfaces and the Petersen graph
-  abstract: >-
+  abstract: |-
     Ever since Cayley and Salmon found in 1849 that a smooth cubic surface contains exactly 27 lines, algebraic geometers have been fascinated by that discovery.
-    Perhaps the most symmetric cubic surface is the one named after Clebsch, who studied it in detail (1871) and of which Klein had a plaster model made which was shown at the World Fair in Chicago (1894).
+    Perhaps the most symmetric cubic surface is the one named after Clebsch, who studied it in detail (1871) (and of which Klein had a plaster model made that was shown at the World Fair in Chicago in 1894).
+
     The Clebsch surface has the same symmetry group as the Petersen graph, namely the alternating group of degree 5.
-    I will explain that this is more than a mere coincidence, for this leads to presentation of the (orbifold) fundamental group of the moduli space of cubic surfaces in terms of a generalized braid group defined by the Petersen graph, when we take the Clebsch surface as base point.
+    I will explain that this is more than a mere coincidence, for this leads to a presentation of the (orbifold) fundamental group of the moduli space of cubic surfaces in terms of a generalized braid group defined by the Petersen graph.
     This is based on joint work with Allcock and Basak.
 johan-martens:
   speaker: johan-martens
@@ -13,3 +14,11 @@ johan-martens:
   abstract: >-
     We will discuss moduli spaces of parahoric Higgs bundles, and use them to describe natural (partial) symplectic resolutions that provide global analogues of Springer resolutions.
     This talk is based on joint work with Logares, Pym, Roth and Wong.
+maarten-solleveld:
+  speaker: maarten-solleveld
+  title: "From Springer to Langlands: a geometric view on the representations of Weyl groups and reductive groups"
+  abstract: >-
+    Springer's best-known achievement is his correspondence, about representations of Weyl groups.
+    We discuss how the generalized Springer correspondence (due to Lusztig) appears in the representation theory of reductive groups over finite fields.
+    We will explain how this leads to the Langlands correspondence for a finite reductive group $G$, as formulated recently by Imai-Vogan.
+    It relates $G$-representations to sheaves on Langlands parameters, like modern versions of the local Langlands program.
