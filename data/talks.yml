@@ -8,6 +8,12 @@ eduard-looijenga:
     The Clebsch surface has the same symmetry group as the Petersen graph, namely the alternating group of degree 5.
     I will explain that this is more than a mere coincidence, for this leads to a presentation of the (orbifold) fundamental group of the moduli space of cubic surfaces in terms of a generalized braid group defined by the Petersen graph.
     This is based on joint work with Allcock and Basak.
+emily-norton:
+  speaker: emily-norton
+  title: Diagrammatic algebras and Hermitian symmetric pairs
+  abstract: >-
+    Some 10-20 years ago, Brundan-Stroppel and Ehrig-Stroppel introduced diagrammatic algebras that realise the basic algebras of the parabolic BGG category O for maximal parabolics of Dynkin types (A,A) and (D,A), respectively.
+    I will discuss another approach using diagrammatic anti-spherical Hecke categories (joint work with Chris Bowman, Maud de Visscher, Niamh Farrell and Amit Hazi), as well as a recent result on the diagrammatic algebra of type (D,A) by my master’s student Eliot Grimont.
 johan-martens:
   speaker: johan-martens
   title: Moduli of parahoric Higgs bundles and symplectic resolutions
